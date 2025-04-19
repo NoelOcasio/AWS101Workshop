@@ -1,0 +1,23 @@
+# Terraform binary files
+*.tfstate
+*.tfstate.backup
+
+# Terraform cache and logs
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+
+# Variables files (if they contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore generated plan files
+*.tfplan
