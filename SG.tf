@@ -12,15 +12,6 @@ resource "aws_security_group" "load_balancer_sg" {
     description = "Allow HTTP Inbound from Internet"
   }
 
-  # Allow HTTPS access from anywhere
-  ingress {
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-    description = "Allow HTTPS traffic from all sources"
-  }
-
   # Allow inbound traffic on the load balancer listener port (e.g., 8080)
   ingress {
     from_port   = 8080
